@@ -8,8 +8,9 @@
 data "aws_region" "current" {}
 
 module "cloudwatch_kms_key" {
-  source  = "dod-iac/cloudwatch-kms-key/aws"
-  version = "1.0.0"
+  #source  = "dod-iac/cloudwatch-kms-key/aws"
+  #version = "1.0.1"
+  source = "github.com/dod-iac/terraform-aws-cloudwatch-kms-key?ref=update_4_0"
 
   name = format("alias/%s", var.test_name)
   tags = var.tags
