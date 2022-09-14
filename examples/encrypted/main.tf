@@ -9,7 +9,7 @@ data "aws_region" "current" {}
 
 module "cloudwatch_kms_key" {
   source  = "dod-iac/cloudwatch-kms-key/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   name = format("alias/%s", var.test_name)
   tags = var.tags
